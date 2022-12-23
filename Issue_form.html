@@ -17,10 +17,50 @@
     <div class="jumbotron">
       <h3>Add New Issue:</h3>
       <form id="issueInputForm">
+        
         <div class="form-group">
-          <label for="issueDescription">Description</label>
-          <input type="text" class="form-control" id="issueDescription" placeholder="Describe the issue ...">
+          <label for="siteDescription">Site Name</label>
+          <input type="text" class="form-control" id="siteDescription" placeholder="Place site Name ...">
         </div>
+
+        <div class="form-group">
+          <label for="date">Date of Problem</label>
+          <input type="text" class="form-control" id="date" placeholder="Date of problem arised ...">
+        </div>
+
+        <div class="form-group">
+          <label for="issuetypeDescription">Type of Problem</label>
+          <input type="text" class="form-control" id="issuetypeDescription" placeholder="Type Of Problem...">
+        </div>
+
+        <div class="form-group">
+          <label for="issueDescription">Description of Problem</label>
+          <input type="text" class="form-control" id="issueDescription" placeholder="Describe the Problem ...">
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="issueDescription">Images or Video</label>
+          <input type="text" class="form-control" id="issueDescription" placeholder="Upload Images ...">
+        </div> -->
+
+        <div class="form-group">
+          <label for="issueraisedby">Issue Raised By</label>
+          <select id="issueraisedby" class="form-control">
+            <option value="Low">Client</option>
+            <option value="Medium">site Incharge</option>
+            
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="scopeissue">Scope of Problem</label>
+          <select id="scopeissue" class="form-control">
+            <option value="Low">Client</option>
+            <option value="Medium">ESSI</option>
+            <option value="High">Vendor Warranty</option>
+          </select>
+        </div>
+
         <div class="form-group">
           <label for="issueSeverity">Severity</label>
           <select id="issueSeverity" class="form-control">
@@ -29,10 +69,18 @@
             <option value="High">High</option>
           </select>
         </div>
+        
         <div class="form-group">
           <label for="issueAssignedTo">Assigned To</label>
           <input type="text" class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
         </div>
+
+        <div class="form-group">
+          <label for="issueReportedby">Reported By To</label>
+          <input type="text" class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
+        </div>
+
+
         <button id="add-issue" onclick="submitIssue()" class="btn btn-primary">Add</button>
       </form>
     </div>
