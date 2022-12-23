@@ -1,10 +1,10 @@
 function submitIssue(e) {
   const getInputValue = id => document.getElementById(id).value;
-  const site_name = getInputValue('siteDescription')
-  const Date_of_Problem = getInputValue('date')
-  const Type_of_Problem = getInputValue('issuetypeDescription')
-
   const description = getInputValue('issueDescription');
+  const site_name = getInputValue('siteDescription');
+  const Date_of_Problem = getInputValue('date');
+  const Type_of_Problem = getInputValue('issuetypeDescription');
+  
   const Issue_Raised_By = getInputValue('issueraisedby');
   const Scope_of_Problem = getInputValue('scopeissue');
   const Reported_By_To = getInputValue('issueReportedby');
@@ -52,14 +52,14 @@ const deleteIssue = id => {
   fetchIssues();
 }
 const fetchIssues = () => {
-
+  
   const issues = JSON.parse(localStorage.getItem('issues'));
   const issuesList = document.getElementById('issuesList');
   issuesList.innerHTML = '';
 
   for (var i = 0; i < issues.length; i++) 
   {
-    const { id, description, severity, assignedTo, status, site_name, Date_of_Problem, Type_of_Problem, Issue_Raised_By, Scope_of_Problem, Reported_By_To } = issues[i];
+    const { id, status, site_name, Date_of_Problem, Type_of_Problem,  description, Issue_Raised_By, Scope_of_Problem, Reported_By_To, severity, assignedTo, } = issues[i];
 
     issuesList.innerHTML += `<div class="well">
                               <h6>Issue ID: ${id} </h6>
